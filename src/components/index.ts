@@ -5,3 +5,10 @@ export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "./ui/t
 export { Skeleton } from "./ui/skeleton";
 
 export { Layout } from "./layout/layout";
+
+// common
+export {
+  DigitalBusinessCard,
+  type DigitalBusinessCardProps,
+  type DigitalBusinessCardSocialLink,
+} from "./common/digital-business-card";
