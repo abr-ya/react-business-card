@@ -1,20 +1,41 @@
-# React + TypeScript + Vite
+# React Component Lab
+
+This project is a sandbox for testing larger React components before moving them into production applications or shared UI libraries.
+
+It is intentionally small: each feature can be developed, reviewed, and exercised in isolation without the surrounding complexity of a real product.
+
+## Existing Components
+
+### Digital Business Card
+
+A compact profile/business-card component with avatar, role, company, contact details, location, short bio, and social links.
+
+Demo route: `/business-card`
+
+### Peak Hours Range Selector
+
+A controlled time-range selector for configuring peak load hours within a day. It supports multiple ranges, drag handles, whole-range dragging, configurable add strategies, minimum gaps between ranges, and optional double-click add/delete behavior.
+
+The project also includes a weekly wrapper that displays seven daily selectors in a dark schedule-style layout.
+
+Demo route: `/peak-hours`
 
 ## Stack
 
-- **Build:** [Vite](https://vite.dev/) 8, TypeScript 5  
-- **UI:** [React](https://react.dev/) 19, [React Compiler](https://react.dev/learn/react-compiler) (Babel)  
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/) 4 (`@tailwindcss/vite`), [tailwind-merge](https://github.com/dcastil/tailwind-merge), [class-variance-authority](https://cva.style/), animations (`tailwindcss-animate`, `tw-animate-css`)  
-- **Components & a11y:** [Radix UI](https://www.radix-ui.com/) (dialog, dropdown, scroll-area, switch, tooltip, etc.), [Lucide](https://lucide.dev/) and Radix Icons  
-- **Routing:** [React Router](https://reactrouter.com/) 7  
-- **Data:** [TanStack Query](https://tanstack.com/query) + devtools  
-- **Charts:** [Recharts](https://recharts.org/)  
-- **Misc:** theming with [next-themes](https://github.com/pacocoursey/next-themes), toasts via [Sonner](https://sonner.emilkowal.ski/), command palette [cmdk](https://cmdk.paco.me/), dates with [date-fns](https://date-fns.org/)  
-- **Tooling:** ESLint 9, Prettier, `@/` import alias → `src/`
+- **Build:** Vite 8, TypeScript 5
+- **UI:** React 19, React Compiler via Babel
+- **Styling:** Tailwind CSS 4, `tailwind-merge`, `class-variance-authority`, `tailwindcss-animate`, `tw-animate-css`
+- **Components and a11y:** Radix UI, Lucide React, Radix Icons
+- **Routing:** React Router 7
+- **Data:** TanStack Query and React Query Devtools
+- **Charts:** Recharts
+- **Utilities:** `next-themes`, Sonner, cmdk, date-fns
+- **Tooling:** ESLint 9, Prettier, `@/` import alias to `src/`
 
 ## Scripts
 
-- `npm run dev` — development server  
-- `npm run build` — production build  
-- `npm run preview` — preview production build  
-- `npm run lint` / `npm run fix` — lint and auto-fix  
+- `npm run dev` - start the development server
+- `npm run build` - create a production build
+- `npm run preview` - preview the production build
+- `npm run lint` - run ESLint
+- `npm run fix` - run ESLint with auto-fix
