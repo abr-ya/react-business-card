@@ -38,8 +38,8 @@ export const RelatedProjectsPage = () => {
             Real places where these components are used.
           </h1>
           <p className="text-base leading-7 text-muted-foreground md:text-lg">
-            A curated list of external websites and products that use components from this lab, with short notes,
-            local previews, component tags, and stack labels.
+            A curated list of external websites and products that use components from this lab, with short notes, local
+            previews, component tags, and stack labels.
           </p>
         </div>
       </section>

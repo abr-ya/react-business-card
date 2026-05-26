@@ -72,8 +72,8 @@ export const HomePage = () => {
               A focused sandbox for testing larger React components.
             </h1>
             <p className="max-w-2xl text-base leading-7 text-muted-foreground md:text-lg">
-              Build, review, and exercise complex UI pieces in isolation before moving them into production
-              applications or shared component libraries.
+              Build, review, and exercise complex UI pieces in isolation before moving them into production applications
+              or shared component libraries.
             </p>
           </div>
         </div>

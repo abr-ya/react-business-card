@@ -182,7 +182,8 @@ const findRangeForStrategy = ({
   return findLargestGapRange(slots, defaultRangeDuration, step);
 };
 
-const findSlotByTime = (slots: FreeSlot[], time: number) => slots.find((slot) => time >= slot.start && time <= slot.end);
+const findSlotByTime = (slots: FreeSlot[], time: number) =>
+  slots.find((slot) => time >= slot.start && time <= slot.end);
 
 export const PeakHoursRangeSelector = ({
   value,
@@ -205,9 +206,7 @@ export const PeakHoursRangeSelector = ({
   const ranges = useMemo(() => sortRanges(value), [value]);
   const freeSlots = useMemo(() => getFreeSlots(ranges, minGap), [ranges, minGap]);
   const canAdd =
-    !disabled &&
-    ranges.length < maxRanges &&
-    freeSlots.some((slot) => slot.end - slot.start >= defaultRangeDuration);
+    !disabled && ranges.length < maxRanges && freeSlots.some((slot) => slot.end - slot.start >= defaultRangeDuration);
 
   const emitChange = useCallback(
     (nextRanges: PeakHoursValue) => {
@@ -464,7 +463,10 @@ export const PeakHoursRangeSelector = ({
       {showAddButton ? (
         <Button
           aria-label="Добавить диапазон"
-          className={cn("size-8 shrink-0 border-white/10 bg-white/10 text-white hover:bg-white/15", showTimeLabels && "mt-5")}
+          className={cn(
+            "size-8 shrink-0 border-white/10 bg-white/10 text-white hover:bg-white/15",
+            showTimeLabels && "mt-5",
+          )}
           disabled={!canAdd}
           onClick={() => addRange()}
           size="icon-sm"

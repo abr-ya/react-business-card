@@ -17,16 +17,7 @@ export const relatedProjects: RelatedProject[] = [
     description:
       "A hiking meal-planning app for managing products, recipes, categories, per-trip food plans, shopping lists, and pack distribution.",
     components: ["App Shell", "Admin Forms", "Data Tables"],
-    stack: [
-      "React",
-      "TypeScript",
-      "Vite",
-      "Tailwind CSS",
-      "Better Auth",
-      "TanStack Query",
-      "React Hook Form",
-      "Zod",
-    ],
+    stack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Better Auth", "TanStack Query", "React Hook Form", "Zod"],
   },
   {
     id: "abr-booking",

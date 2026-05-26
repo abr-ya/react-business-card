@@ -55,10 +55,7 @@ export const WeeklyPeakHoursRangeSelector = ({
 
   return (
     <section
-      className={cn(
-        "w-full overflow-x-auto rounded-md bg-[#091126] p-4 shadow-2xl shadow-slate-950/40",
-        className,
-      )}
+      className={cn("w-full overflow-x-auto rounded-md bg-[#091126] p-4 shadow-2xl shadow-slate-950/40", className)}
     >
       <div className="min-w-[860px]">
         <div className="grid grid-cols-[6.5rem_minmax(0,1fr)_2.75rem] items-end gap-3 pb-2">

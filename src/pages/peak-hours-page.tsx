@@ -72,11 +72,20 @@ export const PeakHoursPage = () => {
   const [week, setWeek] = useState<WeeklyPeakHoursValue>(demoWeek);
 
   return (
-    <div className="mx-auto flex w-full max-w-6xl flex-1 items-center py-10">
+    <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center gap-6 py-10">
+      <div className="max-w-3xl">
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-pink-300">Peak hours demo</p>
+        <h1 className="mt-2 text-3xl font-semibold text-white">Weekly range selection</h1>
+        <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300">
+          Each day allows up to 3 periods. Double-click an empty area to add a new one-hour period when there is enough
+          space, or double-click an existing period to remove it immediately.
+        </p>
+      </div>
       <WeeklyPeakHoursRangeSelector
         addOnDoubleClick
         addRangeStrategy="largest-gap"
         className="mx-auto"
+        maxRanges={3}
         onChange={setWeek}
         value={week}
       />
