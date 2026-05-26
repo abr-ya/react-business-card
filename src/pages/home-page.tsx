@@ -1,4 +1,14 @@
-import { ArrowRight, BadgeCheck, Blocks, Clock3, Contact, FlaskConical, Route, Terminal } from "lucide-react";
+import {
+  ArrowRight,
+  BadgeCheck,
+  Blocks,
+  Clock3,
+  Contact,
+  FlaskConical,
+  PanelsTopLeft,
+  Route,
+  Terminal,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 import { Button, Card, CardContent, CardHeader, CardTitle } from "@/components";
@@ -15,6 +25,12 @@ const components = [
     description: "A controlled range selector with drag handles, weekly layout, gaps, and add strategies.",
     href: "/peak-hours",
     icon: Clock3,
+  },
+  {
+    title: "Related Projects",
+    description: "A curated gallery of external projects that use components from this lab.",
+    href: "/related-projects",
+    icon: PanelsTopLeft,
   },
 ];
 

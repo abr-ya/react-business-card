@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { BusinessCardPage, CityPage, HomePage, PeakHoursPage } from "./pages";
+import { BusinessCardPage, CityPage, HomePage, PeakHoursPage, RelatedProjectsPage } from "./pages";
 import { Layout } from "./components/";
 import { ThemeProvider } from "./providers/theme-provider";
 
@@ -12,6 +12,7 @@ const App = () => (
           <Route path="/business-card" element={<BusinessCardPage />} />
           <Route path="/city/:cityName" element={<CityPage />} />
           <Route path="/peak-hours" element={<PeakHoursPage />} />
+          <Route path="/related-projects" element={<RelatedProjectsPage />} />
         </Routes>
       </Layout>
     </ThemeProvider>

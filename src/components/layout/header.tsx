@@ -1,4 +1,4 @@
-import { Clock3, Contact, FlaskConical, Home } from "lucide-react";
+import { Clock3, Contact, FlaskConical, Home, PanelsTopLeft } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 import { cn } from "@/lib/utils";
@@ -19,6 +19,11 @@ const navItems = [
     label: "Peak Hours",
     href: "/peak-hours",
     icon: Clock3,
+  },
+  {
+    label: "Related Projects",
+    href: "/related-projects",
+    icon: PanelsTopLeft,
   },
 ];
 

@@ -20,6 +20,12 @@ The project also includes a weekly wrapper that displays seven daily selectors i
 
 Demo route: `/peak-hours`
 
+### Related Projects
+
+A curated gallery of external projects that use components from this lab, with local preview images, component badges, stack chips, and external links.
+
+Demo route: `/related-projects`
+
 ## Stack
 
 - **Build:** Vite 8, TypeScript 5
