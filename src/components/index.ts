@@ -12,3 +12,16 @@ export {
   type DigitalBusinessCardProps,
   type DigitalBusinessCardSocialLink,
 } from "./common/digital-business-card";
+export {
+  PeakHoursRangeSelector,
+  type AddRangeStrategy,
+  type PeakHoursRangeSelectorProps,
+  type PeakHoursValue,
+  type PeakRange,
+} from "./common/peak-hours-range-selector";
+export {
+  WeeklyPeakHoursRangeSelector,
+  type DayPeakHours,
+  type WeeklyPeakHoursRangeSelectorProps,
+  type WeeklyPeakHoursValue,
+} from "./common/weekly-peak-hours-range-selector";
