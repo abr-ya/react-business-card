@@ -68,6 +68,14 @@ const demoWeek: WeeklyPeakHoursValue = [
   },
 ];
 
+const formatTime = (value: number) => {
+  const totalMinutes = Math.round(value * 60);
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+
+  return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}`;
+};
+
 export const PeakHoursPage = () => {
   const [week, setWeek] = useState<WeeklyPeakHoursValue>(demoWeek);
 
@@ -81,14 +89,32 @@ export const PeakHoursPage = () => {
           space, or double-click an existing period to remove it immediately.
         </p>
       </div>
-      <WeeklyPeakHoursRangeSelector
-        addOnDoubleClick
-        addRangeStrategy="largest-gap"
-        className="mx-auto"
-        maxRanges={3}
-        onChange={setWeek}
-        value={week}
-      />
+      <div className="flex w-full flex-col items-start gap-4 xl:flex-row">
+        <WeeklyPeakHoursRangeSelector
+          addOnDoubleClick
+          addRangeStrategy="largest-gap"
+          className="mx-auto xl:flex-1"
+          maxRanges={3}
+          onChange={setWeek}
+          value={week}
+        />
+
+        <aside className="w-full rounded-md border border-slate-700/70 bg-slate-950/50 p-3 text-xs text-slate-200 shadow-xl shadow-slate-950/30 xl:w-56 xl:shrink-0">
+          <div className="mb-2 font-medium text-white">Current selection</div>
+          <div className="space-y-1.5">
+            {week.map((day) => (
+              <div className="grid grid-cols-[2rem_1fr] gap-2" key={day.id}>
+                <span className="text-slate-400">{day.label}</span>
+                <span className="truncate">
+                  {day.ranges.length > 0
+                    ? day.ranges.map((range) => `${formatTime(range.start)}-${formatTime(range.end)}`).join(", ")
+                    : "no ranges"}
+                </span>
+              </div>
+            ))}
+          </div>
+        </aside>
+      </div>
     </div>
   );
 };
